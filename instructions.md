@@ -4,7 +4,7 @@ Create a webpage that displays the menu for an ice cream shop.
 
 ## Objectives and requirements
 
-Clone this repo, make a branch with your name for your code, and push your branch to github when you complete the assignment.
+Clone this repo, make a branch with your name, and push your branch to github when you complete the assignment.
 
 Use PostgreSQL, PHP, HTML, CSS. 
 
