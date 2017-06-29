@@ -14,7 +14,7 @@ Your code should connect to the database, fetch results, and loop through those 
 
 Your menu should group menu items by type and display them in different sections. 
 
-You should apply at least basic styling to your menu page. If time permit and you are inclined, you can go nuts and make something really schnazzy. :-)
+You should apply at least basic styling to your menu page. If time permits and you are inclined, you can go nuts and make something really schnazzy. :-)
 
 ## Data
 
@@ -44,7 +44,11 @@ Examples of toppings:
     2. Whipped cream
     3. Sprinkles
 
-If you're feeling creative, you can make your own data set. If not, you can use the examples above.
+Examples of serving options:
+    1. Cone
+    2. Cup
+
+If you're feeling creative, you can make your own data set. If not, you can use the examples above or the hint files.
     
 ## Application file structure
 
@@ -58,7 +62,7 @@ Minimally:
 
 Make sure there's something to read in your README file.
 
-It's okay if your project has more files, but at the least you need the ones listed above.
+It's okay if your project has more files, but you need at least the ones listed above.
 
 ## If you get stuck...
 
