@@ -9,5 +9,16 @@ Setup process:
 4) Login to postgres and create database and user
 	- create database iceCreamShop owner postgres;
 	- create user iceCreamMan with password 'helado';
-5) Create Databases
+5) Create Tables
 	
+	CREATE TABLE menu_items (
+	id serial primary key,
+	status varchar[50],
+	flavor_name varchar[50],
+	flavor_description varchar[100],
+	price integer);
+	
+	CREATE TABLE add_ons (
+	id serial primary key,
+	addon_name varchar[50],
+	addon_type varchar[50]);

@@ -61,5 +61,10 @@
 			</div>
 		</div>
 	</div>
+	<footer class='footer'>
+		<div class='container'>
+		<span class-'text-muted'><a href="/manage">Manage Menu</a></span>
+		</div>
+	</footer>
 </body>
 </html>
