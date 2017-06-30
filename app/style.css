@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css?family=Devonshire');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+	--violetdark: rgba(92, 39, 81, 1); 
+	--violet: rgba(100, 87, 166, 1);
+	--lightpurple: rgba(157, 172, 255, 1);
+	--lightblue: rgba(118, 229, 252, 1);
+	--darkerblue: rgba(75, 192, 217, 1);
+	--chocolate: #664000;
+	--strawberry: #f9d0dd;
+	--vanilla: #FFFFdF;
+	--cone: #d4931e;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	background-color: var(--vanilla);
+}
+h1 {
+	font-family: 'Devonshire', cursive;
+	color: var(--chocolate);
+}
+
+#maincontent {
+    background-image: url(../images/icecreambg.jpg); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  	height:100%;
+	  display:table;
+	  width: 100%;
+	  padding: 17.5%;
+}
+
+.row-fluid {height: 100%; display:table-cell; vertical-align: middle;}
+ 
+i {
+	color: var(--chocolate);
+}
+
+.centering {
+  float:none;
+  margin:0 auto;
+}
+
+.text2 {
+  font-size: 169px;
+}
+
+.shadow {
+  color: #fff;
+  font-weight: bold;
+  text-shadow:
+    -3px -3px 0 #222,
+    3px -3px 0 #222,
+    -3px 3px 0 #222,
+    3px 3px 0 #222,
+    4px 4px 0 #fff,
+    5px 5px 0 #fff,
+    6px 6px 0 #fff,
+    7px 7px 0 #fff;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  -webkit-transform: scaleY(0.7);
+  -moz-transform: scaleY(0.7);
+  margin:0;
+  text-align: center;
+}
+
+
