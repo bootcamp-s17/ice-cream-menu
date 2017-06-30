@@ -1,0 +1,149 @@
+*{
+	margin: 0;
+	padding: 0; 
+}
+
+h1{
+	font-family: 'Mouse Memoirs', sans-serif;
+	text-align: center;
+	font-size: 4em;
+}
+h2{
+	font-family: 'Mouse Memoirs', sans-serif;
+	text-align: center;
+	font-size: 2em;
+}
+
+
+p{
+	font-family: 'PT Sans', sans-serif;
+	text-align: center;
+
+}
+
+
+/* header styling*/
+header{
+	background: white;
+
+}
+
+header h1{
+}
+
+
+/*first hero*/
+#mainhero{
+	background: #53D2C8;
+	min-height: 30em;
+}
+
+#mainhero h1{
+	font-size: 10em;
+	color: white;
+	padding-top: .25em;
+}
+
+
+.stripe{
+	min-height: 2em;
+background: repeating-linear-gradient(
+  -45deg,
+  #FFF,
+  #FFF 10px,
+  #F693B6 10px,
+  #F693B6 20px
+);
+
+}
+
+.stripe2{
+	min-height: 1.5em;
+background: repeating-linear-gradient(
+  -45deg,
+  #F9F6ED,
+  #F9F6ED 10px,
+  #333 10px,
+  #333 20px
+);
+
+}
+
+
+
+/*flavors section*/
+#flavorleft{
+	background: #F693B6;
+	min-height: 25em;
+
+}
+
+#flavorright{
+	background: #FFF;
+	min-height: 25em;
+
+}
+
+#flavorheading{
+	font-size: 8em;
+	padding-top: .5em;
+}
+
+#flavorheading a{ 
+	color: #333333;
+}
+
+#flavorheading2{
+	font-size: 8em;
+	color: #F693B6;
+	padding-top: .7em;
+
+}
+#flavorheading2 a{ 
+	color: #F693B6;
+}
+
+#regularFlavors{
+	display: none;
+}
+
+#seasonalFlavors{
+	display: none;
+
+}
+
+
+/*second hero */
+#secondhero{
+	background: #FFD4E3;
+	min-height: 30em;
+}
+
+#toppingheading2{
+	font-size: 8em;
+	color: #333333;
+	padding-top: .7em;
+
+}
+#toppingheading2 a{
+	color: #333333;
+
+}
+
+
+/*topping section*/
+#toppingRight{
+	background: white;
+	min-height: 25em;
+	display: none;
+
+}
+
+#toppingLeft{
+	background: #53D2C8;
+	min-height: 25em;
+	display: none;
+
+}
+
+
