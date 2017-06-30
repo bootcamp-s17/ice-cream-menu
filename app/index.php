@@ -38,7 +38,7 @@
   				<h5>Toppings</h5>
   			</div>
 				<div class='card-block'>
-					Toppings go here
+					<?php include 'components/display_toppings.php'; ?>
 				
 				</div>
 			</div>
@@ -47,7 +47,7 @@
   				<h5>Serving Options</h5>
   			</div>
 				<div class='card-block'>
-					Serving Options here
+					<?php include 'components/display_containers.php'; ?>
 				
 				</div>
 			</div>

@@ -32,6 +32,16 @@ function getAddOns($db) {
   return pg_fetch_all($request);
 }
 
+function getToppings($db) {
+  $request = pg_query(getDb(), "SELECT * FROM add_ons WHERE addon_type='Topping' ORDER BY addon_name");
+  return pg_fetch_all($request);
+}
+
+function getContainers($db) {
+  $request = pg_query(getDb(), "SELECT * FROM add_ons WHERE addon_type='Container' ORDER BY addon_name");
+  return pg_fetch_all($request);
+}
+
 function getSeasonalFlavors($db) {
   $request = pg_query(getDb(), "SELECT * FROM menu_items WHERE status='seasonal' ORDER BY flavor_name");
   return pg_fetch_all($request);
@@ -71,7 +81,7 @@ if (isset($_GET['submit'])) {
 			break;
 
 		case 'newAddOn':
-			var_dump("Adding Add On");
+			
 			newAddOn(getDb(), $safeName, $safeType);
 			break;
 
