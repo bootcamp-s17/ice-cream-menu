@@ -22,3 +22,8 @@ Setup process:
 	id serial primary key,
 	addon_name varchar[50],
 	addon_type varchar[50]);
+
+6) Added page to manage flavors
+7) wrote functions to insert, update, and remove flavors
+8) Included those into the main display menu
+

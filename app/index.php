@@ -7,40 +7,32 @@
 <body>
 	<?php include 'functions.php'; ?>
 	
-	<div class='container col-md-8 row menu-body'>
+	<div class='container col-md-9 row menu-body'>
 		<h1 class='text-center'>Eyes Cream Ghoulish Dessert Emporium</h1>
 		<div class='col col-md-8'>
 			<div class=" card mb-3 ml-3">
   			<div class='card-header'>
-  				<h4>Seasonal Flavors</h4>
+  				<h3>Seasonal Flavors</h3>
   			</div>
 				<div class='card-block'>
-					Seasonal Flavors go here
+					<?php include 'components/display_seasonal.php'; ?>
 				
 				</div>
 			</div>
 
 			<div class="card mb-3 ml-3">
   			<div class='card-header'>
-  				<h4>Regular Flavors</h4>
+  				<h3>Regular Flavors</h3>
   			</div>
 				<div class='card-block'>
-					Regular Flavors go here
+					<?php include 'components/display_regular.php'; ?>
 				
 				</div>
 			</div>
 		</div>
 		
 		<div class="col col-md-4">
-			<div class="card mb-3 ml-3">
-  			<div class='card-header'>
-  				<h5>Prices</h5>
-  			</div>
-				<div class='card-block'>
-					Prices go here
-				
-				</div>
-			</div>
+			
 			<div class="card mb-3 ml-3">
   			<div class='card-header'>
   				<h5>Toppings</h5>
