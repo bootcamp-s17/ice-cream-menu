@@ -1,14 +1,25 @@
 .menu-body {
 	margin: 0 auto;
 }
+
+html, body {
+	background-color: #E06D06;
+}
 h1 {
 	text-align: center;
 	margin: 50px auto;
 	margin-bottom: 50px;
+	font-family: 'Walter Turncoat', cursive;
 }
 
-footer {
-	background-color: orange;
+.footer {
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  text-align: center;
+	background-color: #000;
 }
 
 .editButton {
@@ -18,4 +29,14 @@ footer {
 h3, h4,h5,h6, p {
 	text-align: center;
 	text-transform: uppercase;
+}
+.card-header {
+	background-color: #000;
+	color: #E06D06;
+}
+h6 {
+	margin-top: 20px;
+}
+.card {
+	background-color: #BA5624;
 }

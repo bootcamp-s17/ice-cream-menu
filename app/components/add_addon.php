@@ -9,5 +9,5 @@
   </select>
   
 
-  <button type="submit" class="btn btn-outline-primary mr-2" name="submit" value="newAddOn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+  <button type="submit" class="btn btn-primary mr-2" name="submit" value="newAddOn"><i class="fa fa-plus" aria-hidden="true"></i></button>
   </form>

@@ -12,8 +12,8 @@
     <option value="Topping">Topping</option>
     <option value="Container">Container</option>
   </select>
-  <button type="submit" class="btn btn-outline-success mr-2" name="submit" value="updateAddOn"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
-  <button type="submit" class="btn btn-outline-danger mr-2" name="submit" value="removeAddOn"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+  <button type="submit" class="btn btn-success mr-2" name="submit" value="updateAddOn"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+  <button type="submit" class="btn btn-danger mr-2" name="submit" value="removeAddOn"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
 </form>
     
 
