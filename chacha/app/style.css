@@ -1,0 +1,52 @@
+/*colors
+grey: #3f4045;
+blue: #004ba8;
+pink: #f0386b;
+yellow: #c2e812;
+purple: #6b2d5c;
+*/
+h1{
+	color:white;
+	margin-left:40%;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+h2{
+	color:#89023e;
+	font-size: 125%;
+	margin-left: 45%;
+	padding-bottom: 20px;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+h5{
+	color:#89023e;
+	font-size: 100%;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+p{
+	font-size: 70%;
+	color:white;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+body{
+	background-color: #ff5a5f;
+}
+.total{
+	margin-left: 40%;
+}
+.total > label {
+	font-family: 'Gloria Hallelujah', cursive;
+	color:white;
+}
+.btn{
+	background-color: #89023e;
+	font-family: 'Gloria Hallelujah', cursive;
+	color:white;
+	width:10em;
+	border: none;
+	margin-bottom: .2em;
+	height: 2em;
+}
+.btn:hover{
+	background-color:#f2a65a;
+}
+
