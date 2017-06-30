@@ -22,6 +22,18 @@
 			</div>
 		</div>
 
+		<div class="card mb-3 ">
+			<div class='card-header'>
+				<h4>Manage Addons</h4>
+			</div>
+			<div class='card-block'>
+				<?php include '../components/add_addon.php'; ?>
+				
+				<?php include '../components/edit_addon.php'; ?>
+
+			</div>
+		</div>
+
 	</div>
 
 </body>
