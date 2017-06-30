@@ -1,14 +1,15 @@
 # Ice Cream Menu App
 ## Using PHP & PostgresQL
 
-### Minimum Requirements:
+### Accomplished
 
-* Create a webpage that displays the menu for an ice cream shop.
+* Started to learn JQuery to navigate through DOM elements
+* Set up Database and pulled from it.
+* Built a mobile friendly app
 
-* Objectives and requirements
 
-* Use PostgreSQL, PHP, HTML, CSS. 
+### Would Like To Improve
 
-* Your code should connect to the database, fetch results, and loop through those results to build your menu page.
-
-* Your menu should group menu items by type and display them in different sections.
+* Adding a transactions table to database to keep track of every complete order
+* Implementing Angular to display all items saved to basket. It is only visble in the console
+* Add GET and POST requests to modify order. Currently need to refresh page to empty out basket.
