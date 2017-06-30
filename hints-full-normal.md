@@ -41,7 +41,7 @@ As the 'icecream' user in PSequel or pgAdmin:
     
     INSERT INTO menu_items (item_type_id, name, description, price) VALUES ((SELECT id FROM item_types WHERE name='Seasonal Ice Cream Flavors'), 'Salted Caramel', 'Buttery, creamy, smooth, and salty', 3.00);
     
-    INSERT INTO menu_items (item_type_id, name, description, price) VALUES ((SELECT id FROM item_types WHERE name='Seasonal Ice Cream Flavors'), '', '', 3);
+    INSERT INTO menu_items (item_type_id, name, description, price) VALUES ((SELECT id FROM item_types WHERE name='Seasonal Ice Cream Flavors'), 'Mandarin Orange Sherbert', 'Fresh and fruity, with bits of pulp', 3);
         
     INSERT INTO menu_items (item_type_id, name, description, price) VALUES ((SELECT id FROM item_types WHERE name='Serving Options'), 'Waffle Cone', 'Made fresh by hand in our store each day', 2.00);
     

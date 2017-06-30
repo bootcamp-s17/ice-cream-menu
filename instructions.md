@@ -68,3 +68,18 @@ It's okay if your project has more files, but you need at least the ones listed 
 
 Take a look at hints-full-regular.md (or hints-full-starwars.md if that's your fandom).
 
+## If you want to do more...
+
+Make a new page that contains an interactive ice cream menu.
+
+Minimally, allow users to select flavors, toppings, and serving methods. 
+
+Highlight their selections when clicked, and remove highlighting when clicked again.
+
+Provide a total at the bottom of the form that updates dynamically as the user adds or removes selections.
+
+## Scoring/grading
+
+Don't worry about this. There is no pass or fail, only guidance for how you can further develop your skills. The instructional team will provide feedback for you early next week. Do your best and have fun! :-)
+
+
