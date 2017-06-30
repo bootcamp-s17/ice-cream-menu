@@ -82,4 +82,14 @@ Provide a total at the bottom of the form that updates dynamically as the user a
 
 Don't worry about this. There is no pass or fail, only guidance for how you can further develop your skills. The instructional team will provide feedback for you early next week. Do your best and have fun! :-)
 
+## One more thing!
 
+We'll need to see your database to properly review your code.
+
+From the root of your project directory, at the command prompt, type:
+
+    pg_dump name-of-your-database > icecream.sql
+
+Substitute the actual name of your database for 'name-of-your-database', of course.
+
+If icecream.sql is created in your project directory, and it is full of comments and SQL commands, then you have done this step correctly. Make sure icecream.sql is included when you submit your completed project branch.
