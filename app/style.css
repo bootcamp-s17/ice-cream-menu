@@ -1,0 +1,22 @@
+body {
+	font-family: 'Cinzel', serif;
+	background-color: #E0E3DA;
+}
+
+.header img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: #555;
+  margin: 10px 10px;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
+#container { 
+	display: inline 
+}
