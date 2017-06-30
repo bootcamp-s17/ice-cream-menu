@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab:300i,400,600');
+$hfont: 'Amatic SC', cursive;
+$pfont: 'Josefin Slab', serif;
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+   font-family: $hfont;
+} 
+
+p, label {
+   font-family: $pfont;
+}
+
+img {
+    width: 100px;
+}
+
+#originals-btn:hover, #flavor-btn:hover, .selected {
+   cursor: pointer;
+   background: #8aafde;
+   color:white;
+}
+
+#flavors, #originals {
+   display: none;
+}
+
+.radio-btn {
+   position: absolute;
+   left: -9999px;
+}
+
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative; 
+  padding: .5em 2em;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+[type="radio"]:not(:checked) + label:hover {
+   opacity: .75;
+}
+
+[type="radio"]:checked + label {
+   font-size: 1.15em;
+   box-shadow: 0px 4px 15px 5px #e1e1e1;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative; 
+  padding: .5em 2em;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label:hover {
+   opacity: .75;
+}
+
+[type="checkbox"]:checked + label {
+   font-size: 1.15em;
+   box-shadow: 0px 4px 15px 5px #e1e1e1;
+}
+
+
+
