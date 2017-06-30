@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+
+
+.menu {
+	background-image: url('/pictures/melted-eyes-cream.jpg');
+	/*background-image: url('/pictures/challengeaccepted.jpg');*/
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	height:100vh;
+	min-height:100vh;
+}
+h1 {
+	font-size: 70px;
+	text-align: center;
+	font-family: 'Coming Soon', cursive !important;
+	text-shadow: 4px 4px 4px #aaa;
+	color: black;
+	padding-top: 10px;
+}
