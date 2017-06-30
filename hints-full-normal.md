@@ -1,10 +1,11 @@
-# YourNameHere's Ice Cream Parlor
+Completed:
 
 In psql or pgAdmin (as your local admin user):
 
   CREATE USER icecream WITH PASSWORD 'nomnomnom';
 
   CREATE DATABASE icecreamdev_dev OWNER icecream;
+
 
 As the 'icecream' user in PSequel or pgAdmin:
 
@@ -52,3 +53,5 @@ As the 'icecream' user in PSequel or pgAdmin:
     INSERT INTO menu_items (item_type_id, name, description, price) VALUES ((SELECT id FROM item_types WHERE name='Toppings'), 'Marshmallows', 'Hand-made the old-fashioned way', 1.50);
     
     INSERT INTO menu_items (item_type_id, name, description, price) VALUES ((SELECT id FROM item_types WHERE name='Toppings'), 'Rainbow Sprinkles', 'Like a million tiny little smiles', 0.75);
+
+

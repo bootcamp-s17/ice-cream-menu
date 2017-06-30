@@ -141,21 +141,16 @@ SELECT pg_catalog.setval('item_types_id_seq', 4, true);
 --
 
 COPY menu_items (id, item_type_id, name, description, price) FROM stdin;
-1	1	Chocolate	for those with a sweetly dark side	2.00
-2	1	Vanilla	for those who enjoy the plain and boring things in life	2.00
-3	1	Strawberry	for those who actually eat all three sections of neopolitan boxes	2.00
-6	3	Waffle Cone	messy but totally worth it	2.00
-7	3	Cup	to avoid getting stains on your nice clothes	0.00
-10	4	Rainbow Sprinkles	tiny pieces of crunchy goodness	0.75
-4	2	Salted Caramel	salty sweet euphoria	3.00
-11	1	Mint Chocolate Chip	the GOAT	2.00
-12	1	Cookies N Creme	warning: substance highly addictive	2.00
-15	4	Gummi Bears	the necessary evil	1.50
-9	4	Marshmallows	sweet, puffy diabetes	1.50
-8	4	Hot Fudge	imported from Belgium	2.75
-13	2	Peppermint	winter is coming	3.00
-5	2	Orange Sherbert	so refreshing you will think it is actually healthy	3.00
-14	2	Lemon Sorbet	perfect for the long summer, which is over	3.00
+1	1	Chocolate	Loved by kids of all ages!	2.00
+2	1	Vanilla	Elegant and understated	2.00
+3	1	Strawberry	A taste of summer...anytime!	2.00
+4	2	Salted Caramel	Buttery, creamy, smooth, and salty	3.00
+5	2	Mandarin Orange Sherbert	Fresh and fruity, with bits of pulp	3.00
+6	3	Waffle Cone	Made fresh by hand in our store each day	2.00
+7	3	Cup	Plenty of room for toppings!	0.00
+8	4	Hot Fudge	Rich, dark, and just sweet enough	2.75
+9	4	Marshmallows	Hand-made the old-fashioned way	1.50
+10	4	Rainbow Sprinkles	Like a million tiny little smiles	0.75
 \.
 
 
