@@ -2,12 +2,17 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 9.6.3
+-- Dumped by pg_dump version 9.6.3
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
+SET row_security = off;
 
 --
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
@@ -30,7 +35,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: item_types; Type: TABLE; Schema: public; Owner: icecream; Tablespace: 
+-- Name: item_types; Type: TABLE; Schema: public; Owner: icecream
 --
 
 CREATE TABLE item_types (
@@ -63,7 +68,7 @@ ALTER SEQUENCE item_types_id_seq OWNED BY item_types.id;
 
 
 --
--- Name: menu_items; Type: TABLE; Schema: public; Owner: icecream; Tablespace: 
+-- Name: menu_items; Type: TABLE; Schema: public; Owner: icecream
 --
 
 CREATE TABLE menu_items (
@@ -99,14 +104,14 @@ ALTER SEQUENCE menu_items_id_seq OWNED BY menu_items.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: icecream
+-- Name: item_types id; Type: DEFAULT; Schema: public; Owner: icecream
 --
 
 ALTER TABLE ONLY item_types ALTER COLUMN id SET DEFAULT nextval('item_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: icecream
+-- Name: menu_items id; Type: DEFAULT; Schema: public; Owner: icecream
 --
 
 ALTER TABLE ONLY menu_items ALTER COLUMN id SET DEFAULT nextval('menu_items_id_seq'::regclass);
@@ -136,16 +141,21 @@ SELECT pg_catalog.setval('item_types_id_seq', 4, true);
 --
 
 COPY menu_items (id, item_type_id, name, description, price) FROM stdin;
-1	1	Chocolate	Loved by kids of all ages!	2.00
-2	1	Vanilla	Elegant and understated	2.00
-3	1	Strawberry	A taste of summer...anytime!	2.00
-4	2	Salted Caramel	Buttery, creamy, smooth, and salty	3.00
-5	2	Lemon Ice		3.00
-6	3	Waffle Cone	Made fresh by hand in our store each day	2.00
-7	3	Cup	Plenty of room for toppings!	0.00
-8	4	Hot Fudge	Rich, dark, and just sweet enough	2.75
-9	4	Marshmallows	Hand-made the old-fashioned way	1.50
-10	4	Rainbow Sprinkles	Like a million tiny little smiles	0.75
+1	1	Chocolate	for those with a sweetly dark side	2.00
+2	1	Vanilla	for those who enjoy the plain and boring things in life	2.00
+3	1	Strawberry	for those who actually eat all three sections of neopolitan boxes	2.00
+6	3	Waffle Cone	messy but totally worth it	2.00
+7	3	Cup	to avoid getting stains on your nice clothes	0.00
+10	4	Rainbow Sprinkles	tiny pieces of crunchy goodness	0.75
+4	2	Salted Caramel	salty sweet euphoria	3.00
+11	1	Mint Chocolate Chip	the GOAT	2.00
+12	1	Cookies N Creme	warning: substance highly addictive	2.00
+15	4	Gummi Bears	the necessary evil	1.50
+9	4	Marshmallows	sweet, puffy diabetes	1.50
+8	4	Hot Fudge	imported from Belgium	2.75
+13	2	Peppermint	winter is coming	3.00
+5	2	Orange Sherbert	so refreshing you will think it is actually healthy	3.00
+14	2	Lemon Sorbet	perfect for the long summer, which is over	3.00
 \.
 
 
@@ -157,7 +167,7 @@ SELECT pg_catalog.setval('menu_items_id_seq', 10, true);
 
 
 --
--- Name: item_types_pkey; Type: CONSTRAINT; Schema: public; Owner: icecream; Tablespace: 
+-- Name: item_types item_types_pkey; Type: CONSTRAINT; Schema: public; Owner: icecream
 --
 
 ALTER TABLE ONLY item_types
@@ -165,7 +175,7 @@ ALTER TABLE ONLY item_types
 
 
 --
--- Name: menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: icecream; Tablespace: 
+-- Name: menu_items menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: icecream
 --
 
 ALTER TABLE ONLY menu_items
@@ -173,21 +183,11 @@ ALTER TABLE ONLY menu_items
 
 
 --
--- Name: menu_items_item_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: icecream
+-- Name: menu_items menu_items_item_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: icecream
 --
 
 ALTER TABLE ONLY menu_items
     ADD CONSTRAINT menu_items_item_type_id_fkey FOREIGN KEY (item_type_id) REFERENCES item_types(id);
-
-
---
--- Name: public; Type: ACL; Schema: -; Owner: Janine
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM "Janine";
-GRANT ALL ON SCHEMA public TO "Janine";
-GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
