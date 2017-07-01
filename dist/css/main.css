@@ -24,7 +24,6 @@ img {
 [type="radio"]:checked + label {
   position: relative;
   padding: .5em 2em;
-  margin-right: 2em;
   cursor: pointer; }
 
 [type="radio"]:not(:checked) + label:hover {
@@ -39,7 +38,6 @@ img {
 [type="checkbox"]:checked + label {
   position: relative;
   padding: .5em 2em;
-  margin-right: 2em;
   cursor: pointer; }
 
 [type="checkbox"]:not(:checked) + label:hover {

@@ -5,7 +5,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/app/includes/header.php';
 ?>
 <body>
    <div class="container-fluid text-center">
-      <form action="GET">
+      <form class="form-inline" action="GET">
       <div class="col-12 mt-5">
       
       <div class="row ">
@@ -19,7 +19,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/app/includes/header.php';
                      <input class="radio-btn" name="size_name" type="radio" id="<?= $size['id'] . $size["name"]?>" data-price="<?= $size['price']?>" value="<?= $size['name']?>" />
                      <label for="<?= $size['id'] . $size["name"] ?>">
                      <?= $size['name'] ?>
-                     <p class="my-0 ml-5 d-inline-block align-middle">$<?= $size['price']?></p>
+                     <p class="my-0 ml-sm-2 ml-md-5 d-inline-block align-middle">$<?= $size['price']?></p>
                      </label> 
                      
                   </div>
@@ -46,7 +46,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/app/includes/header.php';
                <?php foreach (getTable(db(),"flavors") as $flavor) { ?>
                   <div class="col-5 d-inline-block my-3">
                      <input class="radio-btn" name="flavor_name" type="radio" id="<?= $flavor['id'] . $flavor["name"]?>"" data-price="<?= $flavor['price']?>" value="<?= $flavor['name']?>" />
-                     <label for="<?= $flavor['id'] . $flavor["name"] ?>" ><?= $flavor['name'] ?><p class="my-0 ml-5 d-inline-block align-middle">$<?= $flavor['price']?></p></label> 
+                     <label for="<?= $flavor['id'] . $flavor["name"] ?>" ><?= $flavor['name'] ?><p class="my-0 ml-sm-2 ml-md-5 d-inline-block align-middle">$<?= $flavor['price']?></p></label> 
                      
                   </div>
                <?php } ?>
@@ -61,7 +61,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/app/includes/header.php';
                <?php foreach (getTable(db(),"seasonal_flavors") as $flavor) { ?>
                   <div class="col-5 d-inline-block my-3">
                      <input class="radio-btn" name="original_name" type="radio" id="<?= $flavor['id'] . $flavor["name"]?>" data-price="<?= $flavor['price']?>" value="<?= $flavor['name']?>"/>
-                     <label for="<?= $flavor['id'] . $flavor["name"] ?>" ><?= $flavor['name'] ?><p class="my-0 ml-5 d-inline-block align-middle">$<?= $size['price']?></p></label> 
+                     <label for="<?= $flavor['id'] . $flavor["name"] ?>" ><?= $flavor['name'] ?><p class="my-0 ml-sm-2 ml-md-5 d-inline-block align-middle">$<?= $size['price']?></p></label> 
                      
                   </div>
                <?php } ?>
@@ -76,7 +76,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/app/includes/header.php';
                <?php foreach (getTable(db(),"toppings") as $topping) { ?>
                   <div class="col-5 d-inline-block my-3">
                      <input class="radio-btn" name="topping" type="checkbox" id="<?= $topping['id'] . $topping["name"]?>" data-price="<?= $topping['price']?>" value="<?= $topping['name']?>"/>
-                     <label for="<?= $topping['id'] . $topping["name"] ?>"><?= $topping['name'] ?><p class="my-0 ml-5 d-inline-block align-middle">$<?= $topping['price']?></p></label> 
+                     <label for="<?= $topping['id'] . $topping["name"] ?>"><?= $topping['name'] ?><p class="my-0 ml-sm-2 ml-md-5 d-inline-block align-middle">$<?= $topping['price']?></p></label> 
                      
                   </div>
                <?php } ?>
@@ -91,7 +91,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/app/includes/header.php';
                <?php foreach (getTable(db(),"serving_type") as $type) { ?>
                   <div class="col-5 d-inline-block my-3">
                      <input class="radio-btn" name="type_name" type="radio" id="<?= $type['id'] . $type["name"]?>"  data-price="<?= $size['price']?>" value="<?= $type['name']?>"/>
-                     <label for="<?= $type['id'] . $type["name"] ?>"><?= $type['name'] ?> <p class="my-0 ml-5 d-inline-block align-middle">$<?= $size['price']?></p></label> 
+                     <label for="<?= $type['id'] . $type["name"] ?>"><?= $type['name'] ?> <p class="my-0 ml-sm-2 ml-md-5 d-inline-block align-middle">$<?= $size['price']?></p></label> 
                   </div>
                <?php } ?>
             <!-- </form>    -->

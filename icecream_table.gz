@@ -1,0 +1,449 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.6.3
+-- Dumped by pg_dump version 9.6.3
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: flavors; Type: TABLE; Schema: public; Owner: brayn7
+--
+
+CREATE TABLE flavors (
+    id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    price integer DEFAULT 3 NOT NULL
+);
+
+
+ALTER TABLE flavors OWNER TO brayn7;
+
+--
+-- Name: flavors_id_seq; Type: SEQUENCE; Schema: public; Owner: brayn7
+--
+
+CREATE SEQUENCE flavors_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE flavors_id_seq OWNER TO brayn7;
+
+--
+-- Name: flavors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: brayn7
+--
+
+ALTER SEQUENCE flavors_id_seq OWNED BY flavors.id;
+
+
+--
+-- Name: size; Type: TABLE; Schema: public; Owner: brayn7
+--
+
+CREATE TABLE size (
+    id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    price integer NOT NULL
+);
+
+
+ALTER TABLE size OWNER TO brayn7;
+
+--
+-- Name: scoops_id_seq; Type: SEQUENCE; Schema: public; Owner: brayn7
+--
+
+CREATE SEQUENCE scoops_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE scoops_id_seq OWNER TO brayn7;
+
+--
+-- Name: scoops_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: brayn7
+--
+
+ALTER SEQUENCE scoops_id_seq OWNED BY size.id;
+
+
+--
+-- Name: seasonal_flavors; Type: TABLE; Schema: public; Owner: brayn7
+--
+
+CREATE TABLE seasonal_flavors (
+    id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    price integer DEFAULT 4 NOT NULL
+);
+
+
+ALTER TABLE seasonal_flavors OWNER TO brayn7;
+
+--
+-- Name: seasonal_flavors_id_seq; Type: SEQUENCE; Schema: public; Owner: brayn7
+--
+
+CREATE SEQUENCE seasonal_flavors_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE seasonal_flavors_id_seq OWNER TO brayn7;
+
+--
+-- Name: seasonal_flavors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: brayn7
+--
+
+ALTER SEQUENCE seasonal_flavors_id_seq OWNED BY seasonal_flavors.id;
+
+
+--
+-- Name: serving_type; Type: TABLE; Schema: public; Owner: brayn7
+--
+
+CREATE TABLE serving_type (
+    id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    price integer DEFAULT 1 NOT NULL
+);
+
+
+ALTER TABLE serving_type OWNER TO brayn7;
+
+--
+-- Name: serving_type_id_seq; Type: SEQUENCE; Schema: public; Owner: brayn7
+--
+
+CREATE SEQUENCE serving_type_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE serving_type_id_seq OWNER TO brayn7;
+
+--
+-- Name: serving_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: brayn7
+--
+
+ALTER SEQUENCE serving_type_id_seq OWNED BY serving_type.id;
+
+
+--
+-- Name: toppings; Type: TABLE; Schema: public; Owner: brayn7
+--
+
+CREATE TABLE toppings (
+    id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    price integer DEFAULT 0.50 NOT NULL
+);
+
+
+ALTER TABLE toppings OWNER TO brayn7;
+
+--
+-- Name: topping_id_seq; Type: SEQUENCE; Schema: public; Owner: brayn7
+--
+
+CREATE SEQUENCE topping_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE topping_id_seq OWNER TO brayn7;
+
+--
+-- Name: topping_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: brayn7
+--
+
+ALTER SEQUENCE topping_id_seq OWNED BY toppings.id;
+
+
+--
+-- Name: flavors id; Type: DEFAULT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY flavors ALTER COLUMN id SET DEFAULT nextval('flavors_id_seq'::regclass);
+
+
+--
+-- Name: seasonal_flavors id; Type: DEFAULT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY seasonal_flavors ALTER COLUMN id SET DEFAULT nextval('seasonal_flavors_id_seq'::regclass);
+
+
+--
+-- Name: serving_type id; Type: DEFAULT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY serving_type ALTER COLUMN id SET DEFAULT nextval('serving_type_id_seq'::regclass);
+
+
+--
+-- Name: size id; Type: DEFAULT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY size ALTER COLUMN id SET DEFAULT nextval('scoops_id_seq'::regclass);
+
+
+--
+-- Name: toppings id; Type: DEFAULT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY toppings ALTER COLUMN id SET DEFAULT nextval('topping_id_seq'::regclass);
+
+
+--
+-- Data for Name: flavors; Type: TABLE DATA; Schema: public; Owner: brayn7
+--
+
+COPY flavors (id, name, price) FROM stdin;
+2	Chocolate	3
+3	Chocolate Chip	3
+4	Black Raspberry Chocolate Chip	3
+5	Vanilla Bean	3
+6	Mint Chocolate Chip	3
+7	Coconut	3
+8	Cookies and Cream	3
+9	Black Cherry Chocolate Chip	3
+10	Pistachio	3
+11	Rocky Road	3
+12	Strawberry	3
+13	Neopolitan	3
+14	Mint	3
+\.
+
+
+--
+-- Name: flavors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: brayn7
+--
+
+SELECT pg_catalog.setval('flavors_id_seq', 14, true);
+
+
+--
+-- Name: scoops_id_seq; Type: SEQUENCE SET; Schema: public; Owner: brayn7
+--
+
+SELECT pg_catalog.setval('scoops_id_seq', 4, true);
+
+
+--
+-- Data for Name: seasonal_flavors; Type: TABLE DATA; Schema: public; Owner: brayn7
+--
+
+COPY seasonal_flavors (id, name, price) FROM stdin;
+1	Chocolate Coconut Almond	4
+2	Mint Cookies and Cream	4
+3	Strawberry Chocolate Chip	4
+4	Mystery	4
+5	Banana Chocolate Chip	4
+6	Peach	4
+7	Watermellon	4
+8	Key Lime	4
+9	Pumpkin	4
+10	Peppermint Stick	4
+\.
+
+
+--
+-- Name: seasonal_flavors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: brayn7
+--
+
+SELECT pg_catalog.setval('seasonal_flavors_id_seq', 10, true);
+
+
+--
+-- Data for Name: serving_type; Type: TABLE DATA; Schema: public; Owner: brayn7
+--
+
+COPY serving_type (id, name, price) FROM stdin;
+1	Cake Cone	1
+2	Sugar Cone	1
+3	Waffle Cone	1
+4	Chocolate Dipped Sugar Cone	1
+5	Chocolate Dipped Waffle Cone	1
+6	Waffle Bowl	1
+7	Bowl	1
+\.
+
+
+--
+-- Name: serving_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: brayn7
+--
+
+SELECT pg_catalog.setval('serving_type_id_seq', 7, true);
+
+
+--
+-- Data for Name: size; Type: TABLE DATA; Schema: public; Owner: brayn7
+--
+
+COPY size (id, name, price) FROM stdin;
+1	Kids	2
+2	One Scoop	3
+3	Two Scoops	4
+4	Three Scoops	5
+\.
+
+
+--
+-- Name: topping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: brayn7
+--
+
+SELECT pg_catalog.setval('topping_id_seq', 15, true);
+
+
+--
+-- Data for Name: toppings; Type: TABLE DATA; Schema: public; Owner: brayn7
+--
+
+COPY toppings (id, name, price) FROM stdin;
+1	Whipped Cream	1
+2	Caramel	1
+3	Sprinkles	1
+4	Fudge	1
+5	Hot Fudge	1
+6	Chocolate Syrup	1
+7	Brownie	1
+8	Oreos	1
+9	Maraschino Cherry	1
+10	Magic Shell	1
+11	Peanuts	1
+12	Peanutbutter Cups	1
+13	Sliced Almonds	1
+14	Raspberries 	1
+15	Blueberries 	1
+\.
+
+
+--
+-- Name: flavors flavors_name_key; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY flavors
+    ADD CONSTRAINT flavors_name_key UNIQUE (name);
+
+
+--
+-- Name: flavors flavors_pkey; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY flavors
+    ADD CONSTRAINT flavors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: size scoops_name_key; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY size
+    ADD CONSTRAINT scoops_name_key UNIQUE (name);
+
+
+--
+-- Name: size scoops_pkey; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY size
+    ADD CONSTRAINT scoops_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: seasonal_flavors seasonal_flavors_name_key; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY seasonal_flavors
+    ADD CONSTRAINT seasonal_flavors_name_key UNIQUE (name);
+
+
+--
+-- Name: seasonal_flavors seasonal_flavors_pkey; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY seasonal_flavors
+    ADD CONSTRAINT seasonal_flavors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: serving_type serving_type_name_key; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY serving_type
+    ADD CONSTRAINT serving_type_name_key UNIQUE (name);
+
+
+--
+-- Name: serving_type serving_type_pkey; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY serving_type
+    ADD CONSTRAINT serving_type_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: toppings topping_name_key; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY toppings
+    ADD CONSTRAINT topping_name_key UNIQUE (name);
+
+
+--
+-- Name: toppings topping_pkey; Type: CONSTRAINT; Schema: public; Owner: brayn7
+--
+
+ALTER TABLE ONLY toppings
+    ADD CONSTRAINT topping_pkey PRIMARY KEY (id);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
