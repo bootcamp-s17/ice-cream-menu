@@ -15,23 +15,23 @@
 
 
 		function getRegularFlavors($db){
-			$request = pg_query($db, 'SELECT * FROM menu WHERE item_type_id=1;');
+			$request = pg_query($db, 'SELECT * FROM menu_items WHERE item_type_id=1;');
 			return pg_fetch_all($request);
 		};
 
 
 		function getSeasonalFlavors($db){
-			$request = pg_query($db, 'SELECT * FROM menu WHERE item_type_id=2;');
+			$request = pg_query($db, 'SELECT * FROM menu_items WHERE item_type_id=2;');
 			return pg_fetch_all($request);
 		};
 
 		function getToppings($db){
-			$request = pg_query($db, 'SELECT * FROM menu WHERE item_type_id=4;');
+			$request = pg_query($db, 'SELECT * FROM menu_items WHERE item_type_id=4;');
 			return pg_fetch_all($request);
 		};
 
 		function getServingOptions($db){
-			$request = pg_query($db, 'SELECT * FROM menu WHERE item_type_id=3;');
+			$request = pg_query($db, 'SELECT * FROM menu_items WHERE item_type_id=3;');
 			return pg_fetch_all($request);
 		};
 

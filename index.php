@@ -28,7 +28,7 @@
 						<div class="col-3 mt-5">
 							<div class="col">
 								<figure class="figure mb-0">
-									<img src="/images/icecream-icons/<?php if ($item['id'] <= 10) {echo '0'.$item['id'];} else {echo $item['id'];};?>.png" class="figure-img img-fluid rounded" style="width: 50px;" alt="">
+									<img src="/images/icecream-icons/<?php if ($item['id'] < 10) {echo '0'.$item['id'];} else {echo $item['id'];};?>.png" class="figure-img img-fluid rounded" style="width: 50px;" alt="">
 									<figcaption class="figure-caption"><h4><?=$item['name']?></h4></figcaption>
 								</figure>
 							</div>
